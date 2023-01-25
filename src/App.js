@@ -1,25 +1,22 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React, { useState } from 'react';
+import Home from './pages/Home';
+import Game from './pages/Game';
+import Record from './pages/Record';
 import './App.css';
 
 function App() {
+  const [userName, setUserName] = useState(''); // userName는 입력값, setuserName는 입력값을 변경할 함수
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<Home userName={userName} setUserName={setUserName} />}/>
+        <Route path="/game" element={<Game userName={userName} />}/>
+        <Route path="/record" element={<Record />} />
+      </Routes>
+    </Router>
+  )
 }
 
 export default App;

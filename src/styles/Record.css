@@ -1,0 +1,29 @@
+.page-wrapper {
+    text-align: center;
+    height: 900px;
+    border-top: 0px;
+    background: linear-gradient(0deg, rgb(245, 211, 226), rgb(250, 248, 240), white);
+}
+
+.title2 {
+    font-style: italic;
+    text-decoration: underline; 
+    text-underline-position: under;
+    font-size: 40px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.list-text {
+    font-size: 20px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-weight: 400;
+}
+
+.text-button {
+    margin-top: 20px;
+    margin-left: 5px;
+    font-size: 20px;
+}
